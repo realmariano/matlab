@@ -27,11 +27,15 @@ end
 
 In the previous example I already took the num2str(pos(i),NN) to NN=7, meaning that the precision will be 7 digits. 
 
+From **gnovice** post:
+
 Now your datatip text should display more precision for your numbers. If you want to accomplish all of the above programmatically, you would first create your text update function, save it to a file (like 'updateFcn.m'), then turn on Data Cursors using the function datacursormode and set them to use your user-defined text update function. Here's an example:
 
-
+```matlab
 plot(1:10, rand(1, 10));  % Plot some sample data
 dcmObj = datacursormode;  % Turn on data cursors and return the
                           %   data cursor mode object
 set(dcmObj, 'UpdateFcn', @updateFcn);  % Set the data cursor mode object update
                                        %   function so it uses updateFcn.m
+                                       
+```
